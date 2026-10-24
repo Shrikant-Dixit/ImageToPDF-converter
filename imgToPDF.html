@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image to PDF Converter</title>
+    <link rel="stylesheet" href="imgToPDF.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.css" rel="stylesheet">
+
+</head>
+<body>
+    <input type="file" multiple accept="image/*" id="selectImg">
+    <input type="file" accept="application/pdf" id="selectPDF">
+    <button id="pdfConvert" style="cursor: pointer;">Convert to PDF</button>
+    <ul id="fileList"></ul>
+    <div id="preview"></div>
+
+    <div id="editBtns">
+       
+        <button id="cropBtn" class="btns">Crop</button>
+        <button id="rotateBtn" class="btns">Rotate 90</button>
+        <button id="margin" class="btns">Apply WhiteMargins</button>
+        <button id="filter" class="btns">Grayscale</button>
+        <button id="resetBtn" class="btns">Reset</button>
+       
+    </div>
+
+    <!-- importing libraries in html for global scope in pure browser based environment -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://unpkg.com/pdf-lib/dist/pdf-lib.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pica/8.0.0/pica.min.js"></script>
+    <script src="imgToPDF.js"></script>
+</body>
+</html>
